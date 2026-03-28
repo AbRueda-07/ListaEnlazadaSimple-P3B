@@ -118,6 +118,15 @@ public class SinglyLinkedList<T> {
         return count;
     }
 
+    /**
+     * RETO 2:
+     * Limpia toda la lista.
+     */
+    public void clear() {
+        head = null;
+        tail = null;
+        size = 0;
+    }
 
 
     @Override
