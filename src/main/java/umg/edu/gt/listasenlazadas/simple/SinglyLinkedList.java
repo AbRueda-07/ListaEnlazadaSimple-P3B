@@ -130,6 +130,27 @@ public class SinglyLinkedList<T> {
 
 
     /**
+     * RETO 3:
+     * Invierte el orden de la lista.
+     */
+    public void reverse() {
+        SimpleNode<T> previous = null;
+        SimpleNode<T> current = head;
+        SimpleNode<T> next;
+
+        tail = head;
+
+        while (current != null) {
+            next = current.getNext();
+            current.setNext(previous);
+            previous = current;
+            current = next;
+        }
+
+        head = previous;
+    }
+
+    /**
      * RETO 4:
      * Elimina nodos duplicados, dejando solo la primera ocurrencia.
      */
@@ -156,7 +177,6 @@ public class SinglyLinkedList<T> {
         }
     }
 
-    
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder("[");
