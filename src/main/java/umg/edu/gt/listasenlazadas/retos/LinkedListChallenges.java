@@ -16,8 +16,10 @@ public final class LinkedListChallenges {
     public static void run() {
         System.out.println("=== RETOS DE IMPLEMENTACION ===");
         challenge1CountOccurrences();
+        challenge2Clear();
         System.out.println();
     }
+
 
     private static void challenge1CountOccurrences() {
         SinglyLinkedList<String> eventos = new SinglyLinkedList<>();
@@ -39,4 +41,20 @@ public final class LinkedListChallenges {
         System.out.println();
     }
 
+    private static void challenge2Clear() {
+        SinglyLinkedList<Integer> numeros = new SinglyLinkedList<>();
+        numeros.addLast(10);
+        numeros.addLast(20);
+        numeros.addLast(30);
+
+        System.out.println("Reto 2 - Limpiar lista");
+        System.out.println("Antes de clear(): " + numeros);
+
+        numeros.clear();
+
+        System.out.println("Despues de clear(): " + numeros);
+        System.out.println("Size esperado: 0");
+        System.out.println("Size obtenido: " + numeros.size());
+        System.out.println();
+    }
 }
